@@ -1,0 +1,243 @@
+iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ git clone https://github.com/jenjose72/cle.git
+Cloning into 'cle'...
+remote: Enumerating objects: 145, done.
+remote: Counting objects: 100% (145/145), done.
+remote: Compressing objects: 100% (121/121), done.
+remote: Total 145 (delta 9), reused 145 (delta 9), pack-reused 0 (from 0)
+Receiving objects: 100% (145/145), 225.25 KiB | 2.78 MiB/s, done.
+Resolving deltas: 100% (9/9), done.
+iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint:   git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint:   git branch -m <name>
+Initialized empty Git repository in /home/iiitk-lab2/lab_exam/.git/
+iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ ls -a
+.  ..  app.py  Dockerfile  .git  .github  k8s
+iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ git staus
+git: 'staus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .github/
+        Dockerfile
+        app.py
+        k8s/
+
+nothing added to commit but untracked files present (use "git add" to track)
+iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ gt add .
+Command 'gt' not found, but can be installed with:
+sudo apt install genometools
+iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ git add .
+iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .github/workflows/ci.yml
+        new file:   Dockerfile
+        new file:   app.py
+        new file:   k8s/deployment.yaml
+        new file:   k8s/service.yaml
+
+iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ git commit -m "first commit"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'iiitk-lab2@iiitklab2-Vostro-3268.(none)')
+iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ git config --global user.email "nikethnath@gmail.com"
+iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ git config --global user.name "NikethNath"
+iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ git commit -m "first commit"
+[master (root-commit) 8e52539] first commit
+ 5 files changed, 38 insertions(+)
+ create mode 100644 .github/workflows/ci.yml
+ create mode 100644 Dockerfile
+ create mode 100644 app.py
+ create mode 100644 k8s/deployment.yaml
+ create mode 100644 k8s/service.yaml
+iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ git push -help
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --repo <repository>   repository
+    --all                 push all refs
+    --mirror              mirror all refs
+    -d, --delete          delete refs
+    --tags                push tags (can't be used with --all or --mirror)
+    -n, --dry-run         dry run
+    --porcelain           machine-readable output
+    -f, --force           force updates
+    --force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --force-if-includes   require remote updates to be integrated locally
+    --recurse-submodules (check|on-demand|no)
+                          control recursive pushing of submodules
+    --thin                use thin pack
+    --receive-pack <receive-pack>
+                          receive pack program
+    --exec <receive-pack>
+                          receive pack program
+    -u, --set-upstream    set upstream for git pull/status
+    --progress            force progress reporting
+    --prune               prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --follow-tags         push missing but relevant tags
+    --signed[=(yes|no|if-asked)]
+                          GPG sign the push
+    --atomic              request atomic transaction on remote side
+    -o, --push-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+
+iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ git remote add origin https://github.com/NikethNath/lab_exam.git
+iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/NikethNath/lab_exam.git'
+iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ git clone https://github.com/jenjose72/cle.git
+Cloning into 'cle'...
+remote: Enumerating objects: 145, done.
+remote: Counting objects: 100% (145/145), done.
+remote: Compressing objects: 100% (121/121), done.
+remote: Total 145 (delta 9), reused 145 (delta 9), pack-reused 0 (from 0)
+Receiving objects: 100% (145/145), 225.25 KiB | 2.78 MiB/s, done.
+Resolving deltas: 100% (9/9), done.
+iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint:   git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint:   git branch -m <name>
+Initialized empty Git repository in /home/iiitk-lab2/lab_exam/.git/
+iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ ls -a
+.  ..  app.py  Dockerfile  .git  .github  k8s
+iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ git staus
+git: 'staus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .github/
+        Dockerfile
+        app.py
+        k8s/
+
+nothing added to commit but untracked files present (use "git add" to track)
+iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ gt add .
+Command 'gt' not found, but can be installed with:
+sudo apt install genometools
+iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ git add .
+iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .github/workflows/ci.yml
+        new file:   Dockerfile
+        new file:   app.py
+        new file:   k8s/deployment.yaml
+        new file:   k8s/service.yaml
+
+iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ git commit -m "first commit"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'iiitk-lab2@iiitklab2-Vostro-3268.(none)')
+iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ git config --global user.email "nikethnath@gmail.com"
+iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ git config --global user.name "NikethNath"
+iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ git commit -m "first commit"
+[master (root-commit) 8e52539] first commit
+ 5 files changed, 38 insertions(+)
+ create mode 100644 .github/workflows/ci.yml
+ create mode 100644 Dockerfile
+ create mode 100644 app.py
+ create mode 100644 k8s/deployment.yaml
+ create mode 100644 k8s/service.yaml
+iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ git push -help
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --repo <repository>   repository
+    --all                 push all refs
+    --mirror              mirror all refs
+    -d, --delete          delete refs
+    --tags                push tags (can't be used with --all or --mirror)
+    -n, --dry-run         dry run
+    --porcelain           machine-readable output
+    -f, --force           force updates
+    --force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --force-if-includes   require remote updates to be integrated locally
+    --recurse-submodules (check|on-demand|no)
+                          control recursive pushing of submodules
+    --thin                use thin pack
+    --receive-pack <receive-pack>
+                          receive pack program
+    --exec <receive-pack>
+                          receive pack program
+    -u, --set-upstream    set upstream for git pull/status
+    --progress            force progress reporting
+    --prune               prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --follow-tags         push missing but relevant tags
+    --signed[=(yes|no|if-asked)]
+                          GPG sign the push
+    --atomic              request atomic transaction on remote side
+    -o, --push-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+
+iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ git remote add origin https://github.com/NikethNath/lab_exam.git
+iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/NikethNath/lab_exam.git'
+iiitk-lab2@iiitklab2-Vostro-3268:~/lab_exam$ 
