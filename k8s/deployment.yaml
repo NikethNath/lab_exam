@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: streamlit-app
-        image: <DOCKER_USERNAME>/gps-microservice:latest
+        image: 2023bcd56niketh/gps-microservice:latest
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8501
